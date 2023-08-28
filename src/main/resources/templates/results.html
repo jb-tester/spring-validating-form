@@ -1,0 +1,22 @@
+<html>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr
+            th:each="data, iStat : ${results}"
+            th:style="${iStat.odd}? 'font-weight: bold;'"
+            th:alt-title="${iStat.even}? 'even' : 'odd'">
+        <td th:text="${data.name}">name</td>
+        <td th:text="${data.age}">age</td>
+    </tr>
+    </tbody>
+</table>
+<a th:href="@{/}">back</a>
+</body>
+</html>
